@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: #081b33;
+  font-family: fantasy;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #152642;
+  width: 400px;
+  height: 640px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+svg {
+  letter-spacing: 10px;
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: 100%;
+}
+
+svg text {
+  animation: stroke 3s infinite alternate;
+  stroke-width: 2;
+  stroke: #365fa0;
+  font-size: 130px;
+}
+
+.head textarea {
+  letter-spacing: 0.5px;
+  font-family: fantasy;
+  background-color: #081b33;
+  color: #767d92;
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  pointer-events: none;
+  font-size: 0.9rem;
+  margin-top: -20px;
+  padding: 10px 80px 5px 20px;
+  overflow: hidden;
+  resize: none;
+}
+
+.head .copy {
+  color: #767d92;
+  position: absolute;
+  top: 100px;
+  left: 310px;
+  background-color: transparent;
+  border: none;
+  scale: 1.5;
+  cursor: pointer;
+}
+
+.copy:hover {
+  color: white;
+}
+
+.head .regenerate {
+  color: #767d92;
+  position: absolute;
+  top: 100px;
+  left: 340px;
+  background-color: transparent;
+  border: none;
+  scale: 1.5;
+  cursor: pointer;
+}
+
+.regenerate:hover {
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .lengthValue {
+  font-family: fantasy;
+  background-color: transparent;
+  color: #767d92;
+  border: none;
+  width: 25px;
+  float: right;
+}
+
+.form .minNum {
+  font-family: fantasy;
+  background-color: transparent;
+  color: #767d92;
+  border: none;
+  width: 25px;
+  float: right;
+}
+
+.form .minSymb {
+  font-family: fantasy;
+  background-color: transparent;
+  color: #767d92;
+  border: none;
+  width: 25px;
+  float: right;
+}
+
+.form input {
+  float: right;
+  margin-right: 10px;
+}
+
+.form input[type="checkbox"] {
+  accent-color: #436d9c;
+  margin-top: 3px;
+}
+
+.form input[type="range"] {
+  accent-color: #436d9c;
+}
+
+.form label {
+  color: #767d92;
+  background-color: #081b33;
+  margin-top: 20px;
+  border-radius: 20px;
+  text-indent: 10px;
+  padding: 10px;
+}
+
+@keyframes stroke {
+  0% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: rgba(54, 95, 160, 1);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: rgba(54, 95, 160, 1);
+  }
+  80% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: rgba(54, 95, 160, 1);
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgba(72, 138, 204, 1);
+    stroke: rgba(54, 95, 160, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}

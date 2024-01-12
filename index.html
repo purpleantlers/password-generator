@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/95ee5fbbe5.js" crossorigin="anonymous" defer></script>
+    <script src="script.js" defer></script>
+
+    <title>Password Generator</title>
+</head>
+<body>
+    <main class="container" id="container">
+        <header class="head" id="head">
+            <svg viewBox="0 0 1320 300">
+                <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                  Password Generator
+                </text>
+              </svg>  
+            <textarea id="passwordInput"></textarea>
+            <button class="copy" id="copy"><i class="fa-solid fa-clone"></i></button>
+            <button class="regenerate" id="regenerate"><i class="fa-solid fa-rotate-right"></i></button>
+        </header>
+        <form class="form" id="form" onkeypress="return event.keyCode != 13">
+            <label>Length <span class="lengthValue" id="lengthValue"></span>
+                <input type="range" name="length" value="8" min="4" max="128">
+            </label>
+            <label>Uppercase
+                <input type="checkbox" name="uppercase">
+            </label>
+            <label>Lowercase
+                <input type="checkbox" name="lowercase">
+            </label>
+            <label>Numbers
+                <input type="checkbox" name="numbers" checked>
+            </label>
+            <label>Symbols
+                <input type="checkbox" name="symbols">
+            </label>
+            <label>Min Numbers <span class="minNum" id="minNum"></span>
+                <input type="range" name="minNum" min="4" max="10" value="4">
+            </label>
+            <label>Min Symbols <span class="minSymb" id="minSymb"></span>
+                <input type="range" name="minSymb" min="4" max="10" value="4">
+            </label>
+        </form>
+    </main>
+</body>
+</html>
