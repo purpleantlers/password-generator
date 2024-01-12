@@ -168,14 +168,8 @@ svg text {
 
 @media only screen and (width < 400px) {
   .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #152642;
     width: 330px;
-    height: 640px;
-    padding: 20px;
+    height: 660px;
   }
 
   .head .copy {
@@ -186,5 +180,9 @@ svg text {
   .head .regenerate {
     top: 85px;
     left: 270px;
+  }
+
+  svg text {
+    font-size: 110px;
   }
 }
