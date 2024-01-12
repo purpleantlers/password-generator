@@ -169,7 +169,7 @@ svg text {
 @media only screen and (width < 400px) {
   .container {
     width: 330px;
-    height: 660px;
+    height: 700px;
   }
 
   .head .copy {
@@ -183,6 +183,6 @@ svg text {
   }
 
   svg text {
-    font-size: 110px;
+    font-size: 90px;
   }
 }
