@@ -17,7 +17,6 @@ window.addEventListener("DOMContentLoaded", () => {
   lengthValue.textContent = form.length.value;
   minNum.textContent = form.minNum.value;
   minSymb.textContent = form.minSymb.value;
-  passwordInput.style.height = `65px`;
   generatePassword();
 });
 
@@ -132,16 +131,12 @@ const generatePassword = () => {
 
 // UPDATE PASSWORD EVERYTIME INPUT IS CHANGED
 form.addEventListener("input", () => {
-  // UPDATE THE HEIGHT OF THE TEXT AREA WHERE THE PASSWORD IS SHOWN
-    passwordInput.style.height = 'auto';
-    let textAreaHeight = passwordInput.scrollHeight;
-    passwordInput.style.height = `${textAreaHeight+15}px`;
   generatePassword();
   // LIMITS THE MINIMUM NUMBERS AND SYMBOLS DEPENDING ON THE LENGTH OF THE PASSWORD
   if (form.length.value <= 10) {
     form.minNum.max = form.length.value;
     minNum.textContent = form.minNum.value;
-    form.minSymb.max = form.length.value -1;
+    form.minSymb.max = form.length.value;
     minSymb.textContent = form.minSymb.value;
     generatePassword();
   } else {
